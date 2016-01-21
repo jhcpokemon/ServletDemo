@@ -17,7 +17,6 @@ public class LogFilter implements Filter {
         String ip = req.getRemoteAddr();
         System.out.println("IP: " + ip + ",time: " + new Date().toString());
         chain.doFilter(req, resp);
-
     }
 
     public void destroy() {
