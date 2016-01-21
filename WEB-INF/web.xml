@@ -108,6 +108,26 @@
         <url-pattern>/DatabaseAccess</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>UploadServlet</servlet-name>
+        <servlet-class>servlet.UploadServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>UploadServlet</servlet-name>
+        <url-pattern>/UploadServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>PageRedirect</servlet-name>
+        <servlet-class>servlet.PageRedirect</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>PageRedirect</servlet-name>
+        <url-pattern>/PageRedirect</url-pattern>
+    </servlet-mapping>
+
     <error-page>
         <error-code>404</error-code>
         <location>/ErrorHandler</location>
@@ -136,4 +156,11 @@
     <session-config>
         <session-timeout>20</session-timeout>
     </session-config>
+
+    <context-param>
+        <param-name>file_store_path</param-name>
+        <param-value>
+            D:\TDDOWNLOAD\Data
+        </param-value>
+    </context-param>
 </web-app>
